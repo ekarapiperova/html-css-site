@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reservation</title>
+	<link rel="stylesheet" type="text/css" href="styleform.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body id="wrapper">
+	<header>
+		<h1> Реазервирай маса </h1>
+	</header>
+<main>
+<div id="bodypart">
+		<div id="form">
+			<form action="reg.php" method="POST">
+					<label>Име</label><br>
+					<input type="text" name="firstname" id="firstname" placeholder="First Name" >
+					<br>
+					<label>Фамилия</label><br>
+					<input type="text" name="lastname" id="lastname" placeholder="Last Name" >
+					<br>
+					<label>Email</label><br>
+					<input type="email" name="email" id="email" placeholder="email" ><br>
+					<label>Дата</label><br>
+					<input type="date" id="data" name="data" ><br>
+					<label>Час</label>
+					<input type="time" id="time" ><br>
+					<label>Брой хора</label><br>
+					<input type="number" name="broi" id="broi"><br>
+					<label>Телефон</label><br>
+					<input type="number" name="phone" id="phone"><br>
+					<label>Kъде желаете да бъде вашата маса?</label><br>
+					<input type="radio" name="where" id="inside" value="inside" checked="inside">
+					<label for="inside">В Ресторанта</label>
+					<input type="radio" name="where" id="outside" value="outside">
+					<label for="outside">В Градината</label>
+					<br>
+
+					<label>Допълнителни изисквания</label>
+					<br>
+					<textarea name="messege" id="messege" placeholder="Type your messege here"></textarea><br>
+
+				
+					<input  type="submit" name="register" value="Изпрати" id="register" onclick="Validate();">
+			</form>
+
+		</div>
+		<div id="img">
+			
+			<figure>
+				<img src="este-tables.png">
+			</figure>
+			<figcaption>Схема на ресторант "Есте"</figcaption>
+			<div id="icons">				
+					<i class="fab fa-instagram"><a href="#"></a></i>
+					<i class="fab fa-facebook"><a href="#"></a></i>
+					<i class="fab fa-twitter"><a href="#"></a></i>
+			</div>
+
+		</div>
+		<div id="messeges">
+			<h1 id="messeges"></h1>
+		</div>
+		
+	</div>
+	</div>
+	</main>
+		
+
+<script>
+	function Validate(){
+		var firstname=document.getElementById('firstname').value;
+		var lastname=document.getElementById('lastname').value;
+		var email=document.getElementById('email').value;
+		var broi=document.getElementById('broi').value;
+		var	data=document.getElementById('data').value;
+		var time=document.getElementById('time').value;
+		var phone=document.getElementById('phone').value;
+
+		var messege='';
+		
+		if (email=='' || email.length<3) 
+		{
+			messege+='Error email!';
+		
+		}
+		if (email.indexOf('@')===-1 || email.indexOf('.')===-1  ) {
+			messege+='Error invalid email';
+			
+		}
+		if(data=='')
+		{
+			messege+='No date';
+		
+		}
+		if(time=='')
+		{
+			messege+='Error time!';
+			
+		}
+		
+		
+		if(broi==''|| broi<0 || broi>25)
+		{
+			messege+='Invalid number people';
+			
+		}
+		document.getElementById('messege').value=messege;
+		
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=cyrillic');
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Comfortaa', cursive;
+
+}
+#wrapper{
+	width: 1200px;
+	margin:auto;
+}
+
+input, textarea {
+ 
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 3px solid #ba970d;
+    border-radius: 40px;
+   
+}
+
+#inside, #outside{
+	width: 5%;
+	padding: 5px;
+	margin: 15px;
+}
+
+#bodypart div{
+	display: inline-block;
+	float: left;
+}
+#form{
+	width: 40%;
+
+}
+form{
+	margin: 50px 0px 0px 100px;
+}
+#img{
+	width: 60%;
+}
+img{
+	width: 600px;
+	margin-top: 116px;
+}
+
+header{
+	background-image: url('pic3.png');
+	background-size: cover;
+	height: 600px;
+}
+header h1{
+	position: absolute;
+	top: 178px;
+    left: 461px;
+	font-size: 30px;
+	color: #fff;
+	font-style: italic;
+	padding: 70px;
+	border-top:1px solid  rgba(0,0,0,0.6);
+	border-radius: 50px;
+	background-color: rgba(0,0,0,0.6);
+}
+#icons i {
+	display: inline-block;
+	font-size:40pt;
+	margin-left: 50px;
+	color: #ba970d;
+}
+#icons i:hover {
+	
+	color: #fff;
+	background-color:  #ba970d;
+	border-top:2px solid   #ba970d;
+	border-radius: 600px;
+
+}
+#icons {
+    margin-top: 100px;
+    margin-left: 115px;
+}
+figcaption{
+	color:  #ba970d;
+	position: relative;
+    top: -437px;
+    left: 40px;
+
+}
+@media only screen and (max-width: 992px){
+	#wrapper{
+		width: 992px;
+	}
+}
